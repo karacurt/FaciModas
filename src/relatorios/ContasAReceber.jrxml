@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf79c370-34fa-469f-965f-20a4871713f1">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM contasareceber;]]>
+	</queryString>
+	<field name="car_cod" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_dte" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_dtvenc" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_sacado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_ncobra" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_valor" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_desc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="car_obs" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="22ae6ca3-ddc2-44fe-8fa7-4e3867954a14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Contas a Receber]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="2fa26980-959c-45be-a8c7-79c8228b6a50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contas a Receber]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="92" y="0" width="64" height="20" uuid="dda61f13-82d9-4460-91cc-694d8a0d57db"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Emissão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="0" width="67" height="20" uuid="fe1babe9-02e6-4e96-b4c9-7e16d7ea9860"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vencimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="0" width="145" height="20" uuid="81dbe8df-44f7-45a7-8077-1370dc75a214"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Sacado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="92" height="20" uuid="61ff11af-ca48-4f39-9345-89453790e1ce"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nº Cobrança]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="92" height="20" uuid="c0241953-6bbf-4995-8370-3cc2b1b8b099"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="20" uuid="085ddd37-d8d8-491f-bebc-5f40f3b70882"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="166" y="0" width="47" height="20" uuid="b0b4c836-645b-4150-b0d3-7c936aa27869"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{car_dtvenc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="92" height="20" uuid="7b4bad1a-338c-4cdf-b74e-b91dc02090f6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{car_cod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="42" height="20" uuid="ae4c925c-4d49-4fc7-8fb9-c068b877fba0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{car_dte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="0" width="145" height="20" uuid="e6261afd-ad81-48a2-a7c5-546264de5555"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{car_sacado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="92" height="20" uuid="afcdc621-3873-42ce-8a41-4b151140c3e0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{car_ncobra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="92" height="20" uuid="ef9a0a38-380c-428a-b613-7408271f4fd2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{car_valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="523" y="0" width="32" height="20" uuid="00d28a56-9d42-4ec7-9a65-2cba01e207d2"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

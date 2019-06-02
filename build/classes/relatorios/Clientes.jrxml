@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45d9424e-8a83-403a-a0ec-1f1112e347c7">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM cliente;]]>
+	</queryString>
+	<field name="cli_cod" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_cpf" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_rg" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_end" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_bairro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_compl" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_cep" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_tel" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_dtnasc" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cli_pontpromo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="f5d8ad66-0213-4d95-8204-e5a296daff51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Clientes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="41" width="100" height="20" uuid="93a5858c-2243-413d-91ec-d9753723d7c1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="41" width="126" height="20" uuid="5e463843-5335-4d45-a625-6fa95f3bc978"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="41" width="84" height="20" uuid="4ae1b2df-410a-4b6a-99b2-3add132bd118"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="41" width="131" height="20" uuid="9ef8908c-a13c-4860-a765-6c43c6f3a5c4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="41" width="64" height="20" uuid="9839016d-2649-4786-9735-db4e4fc996e5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Pontos ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="50" height="20" uuid="543fc50c-35a9-46fa-96f4-855d9e569846"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="42" uuid="d2266406-acf9-44d8-be4c-751bc3f074ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clientes]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="ae8f31ee-fd58-4694-a3c9-20955116693f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_cod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="100" height="20" uuid="a4835ee3-22b0-419e-be98-f8d876be2f5a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="126" height="20" uuid="7b039dcd-16ff-4439-ab18-7e1dd15f2e5a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_end}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="84" height="20" uuid="65b1b8b3-313c-4e99-a6b1-23d6dc4d4cfb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="131" height="20" uuid="c65f2c65-b461-45f0-aa49-067cac05f2c9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="0" width="64" height="20" uuid="8753bc97-1e51-488e-b781-b05ff5f99b2d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_pontpromo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="523" y="1" width="32" height="20" uuid="8c0214ce-01c3-4f25-872f-14dc977b4a50"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

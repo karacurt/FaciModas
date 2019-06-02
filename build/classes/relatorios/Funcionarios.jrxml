@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72433735-cc57-41b7-927c-43035d7b288b">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM funcionario;]]>
+	</queryString>
+	<field name="func_cod" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_cpf" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_rg" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_ctps" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_dtnasc" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_end" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_bairro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_compl" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_cep" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_tel" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_sal" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_comi" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_peri" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="func_email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="a62b68ed-3342-45f0-ad5d-f6ae8a11b760"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Funcionários]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="33b5993d-7db4-436d-90aa-574a837ec063"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionários]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="20" width="49" height="20" uuid="8c728158-ef01-4056-bfa8-7439718ff5cd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_cod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="49" height="20" uuid="53ec5645-b38f-4a5a-aac3-0da48deddfd2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="49" y="20" width="97" height="20" uuid="5a2c8a0a-1478-4fd2-b2ed-6b3eb62e949c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="20" width="69" height="20" uuid="40b244ca-3e41-4734-ae51-537977f9d24d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="20" width="49" height="20" uuid="d3c8d688-7b53-42a1-b8b1-54638579be85"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_dtnasc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="20" width="69" height="20" uuid="6397d00f-6e99-41ca-8447-5e0a277ce57f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="20" width="68" height="20" uuid="234f3afc-7326-415d-8564-e5b26a39fdf3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_sal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="20" width="65" height="20" uuid="340d97c7-9b05-40e5-95b5-d6575c1396a6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_comi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="20" width="69" height="20" uuid="a73e523f-05f8-4c05-b9e9-15680e8fc423"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{func_peri}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="49" y="0" width="97" height="20" uuid="a0d9d563-5207-4ee7-b25d-11cd0cea34a0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="0" width="69" height="20" uuid="9cb926fa-331a-487c-b7e8-194f37c87a1e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="0" width="69" height="20" uuid="2b6d0738-dc5e-4cce-aa7b-1a7b94343f1d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Data de Nasc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="0" width="68" height="20" uuid="63dff0f9-e95f-4875-8d54-adcfa1af6a87"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Salário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="0" width="65" height="20" uuid="0d4fe32f-e533-47fb-a418-50f12bbd28c8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Comissão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="0" width="69" height="20" uuid="fe5619ce-c7af-426d-ade6-1af978cb9b0d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Período]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="0" width="69" height="20" uuid="888ef534-e5fd-419f-bb7d-c82d8d1cd9fd"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="523" y="0" width="32" height="20" uuid="08f101da-b249-4037-a5d1-b6ae81356c36"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="65219bd3-5def-40b4-bb83-1e0d9b81c429">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM contasapagar;]]>
+	</queryString>
+	<field name="cap_cod" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_dte" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_dtvenc" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_cobrador" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_ncobra" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_valor" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_desc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap_obs" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="e0640f43-aa1d-4406-9989-95e3f5c7cc4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Contas á Pagar]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="76ebaefa-48aa-487c-9874-43a8cb5f2620"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contas á Pagar]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="20" width="92" height="20" uuid="0ad4dd4f-cd6e-43b6-a7d2-df1c73506002"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cap_cod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="20" width="48" height="20" uuid="4ab862ae-7a08-4db9-b64c-f6cf0ac210a3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cap_dte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="20" width="48" height="20" uuid="266dc960-a3aa-49da-8a0f-be69e27364bd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cap_dtvenc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="20" width="148" height="20" uuid="2f9d2d8a-55c2-4e73-9b45-c537acd8fada"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cap_cobrador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="20" width="95" height="20" uuid="d9602ac7-0314-4762-95ad-5489a5d866eb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cap_ncobra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="20" width="92" height="20" uuid="e0bcea7f-d22f-4400-80ec-3dfbea3fa20e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cap_valor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="20" uuid="47ef70e0-9f96-4fe7-8e5e-8f8f4c8f9624"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="70" height="20" uuid="e1dd3be9-8d11-498b-91bf-40c28db11433"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Emissão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="0" width="58" height="20" uuid="e72c420a-41cf-478d-be6d-16c58bd1a9bd"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vencimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="148" height="20" uuid="c6cc34af-c129-41db-995a-bf1ddf2e4b6d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Cobrador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="95" height="20" uuid="1fb0e3c8-d7f3-4d04-81b9-e86dc65d0dde"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nº Cobrador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="92" height="20" uuid="91b9c2a7-2bd8-4879-8a3f-f0f9e66deb9b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="523" y="0" width="32" height="20" uuid="3fd4aeb2-b8aa-4d51-9d4d-a19c5280e78b"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

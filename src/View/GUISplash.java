@@ -1,0 +1,305 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package View;
+
+import java.awt.Color;
+
+/**
+ *
+ * @author lab0519
+ */
+public class GUISplash extends javax.swing.JFrame {
+
+    /**
+     * Creates new form GUISplash
+     */
+    public GUISplash() {
+        initComponents();
+        
+        L1.setVisible(false);
+        L2.setVisible(false);
+        L3.setVisible(false);
+        L4.setVisible(false);
+        L5.setVisible(false);
+        L6.setVisible(false);
+        L7.setVisible(false);
+        L8.setVisible(false);
+        L9.setVisible(false);
+        L10.setVisible(false);
+        L11.setVisible(false);
+        L12.setVisible(false);
+        L13.setVisible(false);
+        
+         new Thread (){
+
+            public void run (){
+
+
+
+
+                carregar.setEnabled(false);
+
+                
+                
+               
+
+                int i;
+                for (i = 0; i<101; i++) {
+
+                    try {
+                        sleep(60);
+                        splash.setValue(i);
+
+                    
+                        if(splash.getValue() <= 5){
+                         L1.setVisible(true);
+                        } else if(splash.getValue() <=12){
+                             L2.setVisible(true);
+                        }else if(splash.getValue() <=18){
+                             L3.setVisible(true); 
+                        }else if(splash.getValue() <=24){
+                             L4.setVisible(true);
+                        }else if(splash.getValue() <=30){
+                            L5.setVisible(true);
+                        }else if(splash.getValue() <= 36){
+                            L6.setVisible(true);
+                          
+                      }else if(splash.getValue() <=42){
+                          L7.setVisible(true);
+                      }else if(splash.getValue() <=48){
+                           L8.setVisible(true);
+                      }else if(splash.getValue() <=54){
+                           L9.setVisible(true);
+                      } else if(splash.getValue() <=60){
+                            L10.setVisible(true);
+                      } else if(splash.getValue() <= 66){
+                            L11.setVisible(true);
+                      }else if(splash.getValue() <= 72){
+                      L12.setVisible(true);
+                      } else if(splash.getValue() <= 78){
+                      L11.setVisible(true);
+                      } else if(splash.getValue() <= 84){
+                          
+        
+                      } else if(splash.getValue() <= 90){
+                          L1.setVisible(false);
+        L2.setVisible(false);
+        L3.setVisible(false);
+        L4.setVisible(false);
+        L5.setVisible(false);
+        L6.setVisible(false);
+        L7.setVisible(false);
+        L8.setVisible(false);
+        L9.setVisible(false);
+        L10.setVisible(false);
+        L11.setVisible(false);
+        L12.setVisible(false);
+                          jPanel1.setBackground(Color.black);
+                      L13.setVisible(true);
+
+
+
+                      }else if(splash.getValue() <= 95){
+                          
+
+                          
+                              } else if(splash.getValue() <= 100){
+
+                      }
+                        
+                      
+                     
+                        
+                        
+                        
+                        
+                        if (splash.getValue() <= 20){
+                            carregar.setText("Inicializando Sistema...");
+                        }else if(splash.getValue() <=50){
+                            carregar.setText("Atualizando Drivers...");
+                        }else if(splash.getValue() <=70){
+                            carregar.setText("Carregando Banco de Informações...");
+                        }else if(splash.getValue() <=90){
+                            carregar.setText("Conectando ao Banco de Dados...");
+                        }else if(splash.getValue() <=97){
+                            carregar.setText("Obtendo respostas...");
+                        }else if(splash.getValue() == 100){
+                            carregar.setText("Concluido!");
+                           
+
+                            new GUILogin().setVisible(true);
+
+                        }
+
+                    } catch (InterruptedException ex) {
+                //        Logger.getLogger(intro.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                }dispose();
+                
+
+            }
+
+        }.start();
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        carregar = new javax.swing.JLabel();
+        splash = new javax.swing.JProgressBar();
+        L5 = new javax.swing.JLabel();
+        L10 = new javax.swing.JLabel();
+        L2 = new javax.swing.JLabel();
+        L7 = new javax.swing.JLabel();
+        L8 = new javax.swing.JLabel();
+        L9 = new javax.swing.JLabel();
+        L11 = new javax.swing.JLabel();
+        L12 = new javax.swing.JLabel();
+        L13 = new javax.swing.JLabel();
+        L4 = new javax.swing.JLabel();
+        L3 = new javax.swing.JLabel();
+        L1 = new javax.swing.JLabel();
+        L6 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(null);
+
+        carregar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        carregar.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(carregar);
+        carregar.setBounds(120, 420, 210, 30);
+        jPanel1.add(splash);
+        splash.setBounds(0, 450, 770, 30);
+
+        L5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash5.png"))); // NOI18N
+        jPanel1.add(L5);
+        L5.setBounds(630, 0, 140, 140);
+
+        L10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash14.jpg"))); // NOI18N
+        jPanel1.add(L10);
+        L10.setBounds(630, 310, 140, 140);
+
+        L2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash2.png"))); // NOI18N
+        jPanel1.add(L2);
+        L2.setBounds(170, 40, 140, 140);
+
+        L7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash7.png"))); // NOI18N
+        jPanel1.add(L7);
+        L7.setBounds(170, 260, 140, 140);
+
+        L8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash8.png"))); // NOI18N
+        jPanel1.add(L8);
+        L8.setBounds(320, 310, 140, 140);
+
+        L9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash15.jpg"))); // NOI18N
+        jPanel1.add(L9);
+        L9.setBounds(470, 250, 140, 140);
+
+        L11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash11.png"))); // NOI18N
+        jPanel1.add(L11);
+        L11.setBounds(0, 160, 140, 140);
+
+        L12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash12.png"))); // NOI18N
+        jPanel1.add(L12);
+        L12.setBounds(630, 160, 140, 140);
+
+        L13.setFont(new java.awt.Font("Segoe UI Light", 1, 48)); // NOI18N
+        L13.setForeground(new java.awt.Color(255, 255, 255));
+        L13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logobranco1.png"))); // NOI18N
+        L13.setText("FaciModas 1.0");
+        jPanel1.add(L13);
+        L13.setBounds(100, 90, 610, 260);
+
+        L4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash4.png"))); // NOI18N
+        jPanel1.add(L4);
+        L4.setBounds(470, 70, 140, 140);
+
+        L3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash3.png"))); // NOI18N
+        jPanel1.add(L3);
+        L3.setBounds(320, 0, 140, 140);
+
+        L1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash1.png"))); // NOI18N
+        jPanel1.add(L1);
+        L1.setBounds(10, 0, 140, 140);
+
+        L6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lash6.png"))); // NOI18N
+        jPanel1.add(L6);
+        L6.setBounds(0, 310, 140, 140);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 770, 480);
+
+        setSize(new java.awt.Dimension(769, 483));
+        setLocationRelativeTo(null);
+    }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GUISplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GUISplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GUISplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GUISplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUISplash().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel L1;
+    private javax.swing.JLabel L10;
+    private javax.swing.JLabel L11;
+    private javax.swing.JLabel L12;
+    private javax.swing.JLabel L13;
+    private javax.swing.JLabel L2;
+    private javax.swing.JLabel L3;
+    private javax.swing.JLabel L4;
+    private javax.swing.JLabel L5;
+    private javax.swing.JLabel L6;
+    private javax.swing.JLabel L7;
+    private javax.swing.JLabel L8;
+    private javax.swing.JLabel L9;
+    private javax.swing.JLabel carregar;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JProgressBar splash;
+    // End of variables declaration//GEN-END:variables
+}
